@@ -172,13 +172,56 @@
         #exp-pro {
             width: 500px;
             border-radius: 12px;
-            padding: 15px;
-            transition: 0.2s;
-            position: relative;
+            padding: 18px 20px;
+            background: #1a1b20;
+            border: 1px solid #ff8c00;
             display: flex;
             flex-direction: column;
-            border: 1px solid #ff8c00;
+            gap: 10px;                   /* espacement maîtrisé */
+            transition: 0.2s;
         }
+        
+        /* Titre Expérience Professionnelle */
+        #exp-pro h3 {
+            font-size: 1.4em;
+            margin: 0 0 8px 0;
+            text-align: center;
+            color: #ffd9b0;              /* orange doux pour l’harmonie */
+        }
+        
+        /* Nom du poste */
+        #exp-pro h4 {
+            font-size: 1.15em;
+            margin: 6px 0 0 0;
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        /* Dates + entreprise */
+        #exp-pro h5 {
+            font-size: 0.95em;
+            margin: 4px 0 12px 0;
+            font-weight: normal;
+            color: #ffb36b;
+            text-align: center;
+        }
+        
+        /* Logo */
+        #exp-pro img {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            filter: drop-shadow(0 0 4px #0005);
+        }
+        
+        /* Liste des missions */
+        #exp-pro p {
+            font-size: 0.95em;  
+            color: var(--text-light);
+            margin: 4px 0;
+            line-height: 1.35;
+        }
+
 
         #formation {
             width: 500px;
@@ -477,6 +520,7 @@
 </body>
 
 </html>
+
 
 
 
