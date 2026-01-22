@@ -1,36 +1,203 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projets</title>
+    <meta charset="UTF-8">
+    <title>Projets | Thomas Langlois</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg-main: #0F1923;
+            --bg-dark: #11111c;
+            --text-light: #ffffff;
+            --text-dark: #e5e5e5;
+            --accent: #25CC68;
+            --card-bg: #16171a;
+        }
+
+        body {
+            margin: 0;
+            font-family: Verdana, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-dark);
+        }
+
+        /* TITRE */
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            margin: 80px auto 60px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-light);
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .title-wrapper {
+            text-align: center;
+        }
+
+        /* GRILLE */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 0 8% 80px;
+        }
+
+        /* CARD */
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            border: 1px solid #1f2024;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+        }
+
+        /* CONTENU VISIBLE */
+        .project-main {
+            padding: 18px;
+        }
+
+        .project-main img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .project-main h3 {
+            margin: 0 0 8px;
+            color: var(--text-light);
+        }
+
+        .project-main p {
+            font-size: 0.95em;
+            line-height: 1.4em;
+        }
+
+        /* DÉTAILS (HOVER) */
+        .project-details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.4s ease;
+            padding: 0 18px;
+        }
+
+        .project-card:hover .project-details {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 18px;
+        }
+
+        .project-details p {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .details-images {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .details-images img {
+            width: 100%;
+            max-width: 90px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Mes Projets</h1>
-  </header>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="a-propos.html">À propos de moi</a>
-    <a href="projets.html">Projets</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <section>
-    <h2>Projets réalisés dans le cadre de l'IUT</h2>
-    <ul>
-      <li><strong>Projet 1 :</strong> [Nom du projet] - [Description courte]</li>
-      <li><strong>Projet 2 :</strong> [Nom du projet] - [Description courte]</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Projets personnels</h2>
-    <ul>
-      <li><strong>Projet 1 :</strong> [Nom du projet] - [Description courte]</li>
-      <li><strong>Projet 2 :</strong> [Nom du projet] - [Description courte]</li>
-    </ul>
-  </section>
-  <footer>
-    <p>© 2025 Mon Portfolio</p>
-  </footer>
+
+    <div class="title-wrapper">
+        <h1>Mes projets</h1>
+    </div>
+
+    <section class="projects-grid">
+
+        <!-- CARD 1 -->
+        <div class="project-card">
+            <div class="project-main">
+                <img src="images/projet_rover.jpg" alt="Rover miniature">
+                <h3>Little Curiosity</h3>
+                <p>Conception d’une version miniature du rover Curiosity, dédié à l’exploration et à l’observation.</p>
+            </div>
+
+            <div class="project-details">
+                <p>
+                    Projet personnel mêlant électronique embarquée, mécanique et vision par ordinateur.
+                    Le rover intègre une mobilité tout-terrain, des caméras embarquées et une architecture
+                    multi-microcontrôleurs.
+                </p>
+
+                <div class="details-images">
+                    <img src="images/rover_1.jpg">
+                    <img src="images/rover_2.jpg">
+                    <img src="images/rover_3.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="project-card">
+            <div class="project-main">
+                <img src="images/projet_drone.jpg" alt="Drone">
+                <h3>Drone d’observation A.S.E.</h3>
+                <p>Drone expérimental orienté cartographie, suivi automatique et reconnaissance d'objets.</p>
+            </div>
+
+            <div class="project-details">
+                <p>
+                    [je dois compléter]
+                </p>
+
+                <div class="details-images">
+                    <img src="images/drone_1.jpg">
+                    <img src="images/drone_2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="project-card">
+            <div class="project-main">
+                <img src="images/projet_concours.jpg" alt="Concours robotique">
+                <h3>Système de vidéosurveillance</h3>
+                <p>[je l'ai pas documenté à l'époque je vais devoir le refaire]</p>
+            </div>
+
+            <div class="project-details">
+                <p>
+                    il était cool
+                </p>
+
+                <div class="details-images">
+                    <img src="images/robot_1.jpg">
+                    <img src="images/robot_2.jpg">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </body>
 </html>
