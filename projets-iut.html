@@ -163,14 +163,15 @@
                 <div class="project-card">
                     <h3>SAÉ 4 : UAD station météo</h3>
                     <img src="images/meteo.jpg">
-                    <p>Système de mesure environnementale autonome.</p>
+                    <p>Système de génération, d'acquisition et de stockage de données météorologiques simulées.</p>
 
                     <div class="project-details">
-                        Capteurs météo, microcontrôleur, acquisition et traitement des données,
-                        affichage et communication.
+                        Ce système est composé de 3 élements principaux : 
+                        La carte SIMCAP (SIMulation CAPteurs), qui génère 4 signaux météorologiques : température intérieure, extérieure, vitesse et direction du vent.
+                        La carte MICAP (MIse en forme CApteurs), qui filtre et traite les signaux avant de les convertir en données numériques.
+                        Une Raspberry Pi 3, qui récupère les données de la MICAP via I2C afin de les délivrer à l'utilisateur sous différentes formes (tableau CSV, affichage sur écran tactile, site web, liaison TTL avec un pc, etc)
                     </div>
                 </div>
-
             </div>
         </div>
 
