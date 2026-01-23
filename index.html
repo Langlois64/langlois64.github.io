@@ -142,11 +142,17 @@
             min-height: 100vh;
             padding: 80px 8%;
             border-bottom: 2px solid var(--accent);
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-            grid-auto-rows: auto;
-            gap: 30px; /* espace entre les blocs */
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 30px;
         }
+        .about-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }       
+
         #aboutme p {
             color: var(--text-light);
             font-size: 1em;
@@ -224,7 +230,7 @@
             font-size: 0.95em;  
             color: var(--text-light);
             margin: 4px 0;
-            line-height: 1.35;
+            line-height: 1;
         }
 
 
@@ -388,92 +394,95 @@
 
     <!-- ABOUT ME -->
     <div id="aboutme">
-        
-        <div id="bio-random">
-            <p>Curieux de nature et passionné par les sciences en général, j’ai choisi l’électronique comme domaine central afin de pouvoir concevoir mes propres outils et équipements. J’aime développer des systèmes qui me permettent d’explorer mes autres passions : l'exploration, la géologie, la paléontologie, l'éthologie, etc.</p>
-        </div>
-        <div id="exp-pro">
-            <h3>Expérience Professionnelle</h3>
-            <img src="images/Logo_M_Multinnov.webp">
-            <h4>Apprenti technicien R&D électronique</h4>
-            <h5>Multinnov, 07/2025 - Aujourd'hui</h5>
-            <p>Établissement de cahiers des charges techniques</p>
-            <p>Conception de circuits imprimés</p>
-            <p>Réalisation de dessins techniques</p>
-            <p>Tests et débogage de prototypes</p>
-        </div>
-        <div id="stack-tech">
-            <h3>Outils & technologies</h3>
+        <div class="about-column">
+            <div id="bio-random">
+                <h3>Démarche personnelle</h3>
+                <p>Curieux de nature et attiré par les sciences au sens large, j’ai choisi l’électronique comme domaine central afin de concevoir mes propres outils et systèmes. Cette approche me permet de développer des dispositifs adaptés au service de mes autres centres d’intérêt, tels que l’exploration, la paléontologie et l’éthologie.</p>
+            </div>
+            <div id="stack-tech">
+                <h3>Outils & technologies</h3>
 
-            <div class="stack-grid">
+                <div class="stack-grid">
 
-                <div class="stack-item">
-                    <img src="images/logo-altium-designer.png">
-                    <span>Altium</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo-altium-designer.png">
+                        <span>Altium</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/Logo_KiCAD.png">
-                    <span>KiCad</span>
-                </div>
-                
-                <div class="stack-item">
-                    <img src="images/Logo_Proteus.png">
-                    <span>Proteus</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/Logo_KiCAD.png">
+                        <span>KiCad</span>
+                    </div>
+                    
+                    <div class="stack-item">
+                        <img src="images/Logo_Proteus.png">
+                        <span>Proteus</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/Logo_fusion.png">
-                    <span>Fusion 360</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/Logo_fusion.png">
+                        <span>Fusion 360</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_arduino.png">
-                    <span>Arduino</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo_arduino.png">
+                        <span>Arduino</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_raspberry.png">
-                    <span>Raspberry Pi</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo_raspberry.png">
+                        <span>Raspberry Pi</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_esp.png">
-                    <span>ESP32</span>
-                </div>
-                
-                <div class="stack-item">
-                    <img src="images/logo_stm32.png">
-                    <span>STM32</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo_esp.png">
+                        <span>ESP32</span>
+                    </div>
+                    
+                    <div class="stack-item">
+                        <img src="images/logo_stm32.png">
+                        <span>STM32</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_c++.png">
-                    <span>C++</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo_c++.png">
+                        <span>C++</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_python.png">
-                    <span>Python</span>
-                </div>
+                    <div class="stack-item">
+                        <img src="images/logo_python.png">
+                        <span>Python</span>
+                    </div>
 
-                <div class="stack-item">
-                    <img src="images/logo_matlab.png">
-                    <span>Matlab</span>
+                    <div class="stack-item">
+                        <img src="images/logo_matlab.png">
+                        <span>Matlab</span>
+                    </div>
+                    
+                    <div class="stack-item">
+                        <img src="images/logo_labview.png">
+                        <span>LabVIEW</span>
+                    </div>    
                 </div>
-                
-                <div class="stack-item">
-                    <img src="images/logo_labview.png">
-                    <span>LabVIEW</span>
-                </div>
-                
             </div>
         </div>
-        <div id="formation">
-            <h3>Formation</h3>
-            <h4>BUT Génie Électrique et Informatique Industrielle</h4>
-            <h5>IUT Grand Ouest Normandie, 2024-2027</h5>
-            <p>D'une durée de 3 ans, le BUT GEII allie théorie et pratique afin de préparer au métier de technicien dans les domaines suivants : robotique, électronique, automatisme, informatique, énergie. Son programme est structuré autour de 4 compétences : Concevoir, Vérifier, Maintenir et Intégrer</p>
+        <div class ="about-column">
+            <div id="exp-pro">
+                <h3>Expérience professionnelle</h3>
+                <img src="images/Logo_M_Multinnov.webp">
+                <h4>Apprenti technicien R&D électronique</h4>
+                <h5>Multinnov, 07/2025 - Aujourd'hui</h5>
+                <p>Établissement de cahiers des charges techniques</p>
+                <p>Conception de circuits imprimés</p>
+                <p>Réalisation de dessins techniques</p>
+                <p>Tests et débogage de prototypes</p>
+            </div>
+            <div id="formation">
+                <h3>Formation</h3>
+                <h4>BUT Génie Électrique et Informatique Industrielle</h4>
+                <h5>IUT Grand Ouest Normandie, 2024-2027</h5>
+                <p>D'une durée de 3 ans, le BUT GEII allie théorie et pratique afin de préparer au métier de technicien dans les domaines suivants : robotique, électronique, automatisme, informatique, énergie. Son programme est structuré autour de 4 compétences : Concevoir, Vérifier, Maintenir et Intégrer</p>
+            </div>
         </div>
     </div>
 
@@ -533,6 +542,7 @@
 </body>
 
 </html>
+
 
 
 
