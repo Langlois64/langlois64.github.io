@@ -153,14 +153,14 @@
             padding: 12px 4%;
             border-bottom: 2px solid var(--accent);
             display: grid;
-            gap: 12px;
+            gap: 20px;
             grid-template-columns: 1fr 1fr;
             align-items: start;
         }
         .about-column {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
         }       
 
         #aboutme p {
@@ -245,7 +245,7 @@
 
         .stack-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
             margin-top: 8px;
         }
@@ -263,7 +263,8 @@
             justify-content: center; /* IMPORTANT pour centrer */
             gap: 4px;
             transition: 0.2s;
-            aspect-ratio: auto;
+            height: 120px;
+            aspect-ratio: 1/1;
         }
 
         .stack-item:hover {
@@ -288,14 +289,14 @@
         /* PROJETS */
         #projets {
             background: var(--bg-main);
-            min-height: calc(100vh - var(--header-height));
+            min-height: calc(100vh - var(--header-height)-30px);
             display: flex;
             flex-direction: row;
-            gap: 8%;
+            gap: 6%;
             flex-wrap: wrap;
             align-content: start;
             justify-content: space-evenly;
-            padding: 8% 5%;
+            padding: 3% 5% 4% 5%; /* reduce top padding to bring boxes closer to the title */
             border-bottom: 2px solid var(--accent);
             overflow: auto;
         }
@@ -303,7 +304,8 @@
             width: 100%;
             text-align: center; /* Centre l'élément enfant inline-block */
             margin-top: 0;   /* header is fixed, section heights already account for it */
-            padding-top: calc(var(--header-height));
+            padding-top: 30px; /* no extra offset needed here */
+            margin-bottom: 6px;
         }
         #projets-personnels, #projets-professionnels, #projets-iut {
             width: 340px;
