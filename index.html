@@ -239,6 +239,28 @@
               overflow: auto;
         }
 
+        /* Meta row: image left, titles/text right on wide screens */
+        .meta-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .meta-row img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            flex: 0 0 auto;
+        }
+        .meta-text { flex: 1 1 auto; }
+
+        @media (min-width: 720px) {
+            .meta-row { flex-direction: row; align-items: center; }
+            .meta-row img { width: 120px; }
+            .meta-text h4, .meta-text h5 { margin: 0; }
+            .meta-text p { margin: 6px 0 0 0; }
+        }
+
         .stack-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -470,19 +492,30 @@
         <div class ="about-column">
             <div id="exp-pro">
                 <h3>Expérience professionnelle</h3>
-                <img src="images/multinnov.webp">
-                <h4>Apprenti technicien R&D électronique</h4>
-                <h5>Multinnov, 07/2025 - Aujourd'hui</h5>
-                <p>Établissement de cahiers des charges techniques</p>
-                <p>Conception de circuits imprimés</p>
-                <p>Réalisation de dessins techniques</p>
-                <p>Tests et débogage de prototypes</p>
+                <div class="meta-row">
+                    <img src="images/multinnov.webp" alt="Logo Multinnov">
+                    <div class="meta-text">
+                        <h4>Apprenti technicien R&D électronique</h4>
+                        <h5>Multinnov, 07/2025 - Aujourd'hui</h5>
+                    </div>
+                </div>
+                <div>
+                        <p>Établissement de cahiers des charges techniques</p>
+                        <p>Conception de circuits imprimés</p>
+                        <p>Réalisation de dessins techniques</p>
+                        <p>Tests et débogage de prototypes</p>
+                    </div>
             </div>
             <div id="formation">
                 <h3>Formation</h3>
-                <img src="images/iutgon.png">
-                <h4>BUT Génie Électrique et Informatique Industrielle</h4>
-                <h5>IUT Grand Ouest Normandie, 2024-2027</h5>
+                <div class="meta-row">
+                    <img src="images/iutgon.png" alt="Logo IUT">
+                    <div class="meta-text">
+                        <h4>BUT Génie Électrique et Informatique Industrielle</h4>
+                        <h5>IUT Grand Ouest Normandie, 2024-2027</h5>
+
+                    </div>
+                </div>
                 <p>D'une durée de 3 ans, le BUT GEII allie théorie et pratique afin de préparer au métier de technicien dans les domaines suivants : robotique, électronique, automatisme, informatique, énergie. Son programme est structuré autour de 4 compétences : Concevoir, Vérifier, Maintenir et Intégrer</p>
             </div>
         </div>
