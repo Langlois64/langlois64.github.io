@@ -128,19 +128,25 @@
             overflow: hidden;
             transition: opacity 0.25s ease, max-height 0.3s ease;
         }
-
+        .project-details img {
+            width: 100%;     
+            object-fit: contain;      
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #0f1923; 
+        }
         .project-card:hover .project-details {
             opacity: 1;
             max-height: 220px;
             overflow-y: auto;
             padding-right: 6px;
         }
-
+        
         /* Scrollbar styles for project details (WebKit + Firefox) */
         .project-details::-webkit-scrollbar {
             width: 10px;
         }
-
+        
         .project-details::-webkit-scrollbar-track {
             background: rgba(15,25,35,0.45);
             border-radius: 10px;
