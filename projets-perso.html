@@ -51,19 +51,18 @@
         /* GRILLE */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 0 8% 80px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         /* CARD */
         .project-card {
             background: var(--card-bg);
-            border-radius: 14px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: 0.3s ease;
+            transition: 0.25s;
             border: 1px solid #1f2024;
-            position: relative;
+            padding: 15px;        
         }
 
         .project-card:hover {
@@ -71,45 +70,73 @@
             border-color: var(--accent);
         }
 
-        /* CONTENU VISIBLE */
-        .project-main {
-            padding: 18px;
-        }
-
-        .project-main img {
+        .project-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 12px;
+            aspect-ratio: 1 / 1;      
+            object-fit: contain;      
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #0f1923; 
         }
 
-        .project-main h3 {
-            margin: 0 0 8px;
+        .project-card h3 {
+            margin: 0 0 6px;
             color: var(--text-light);
         }
 
-        .project-main p {
-            font-size: 0.95em;
+        .project-card p {
+            font-size: 0.9em;
             line-height: 1.4em;
         }
 
         /* DÉTAILS (HOVER) */
         .project-details {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: 0.4s ease;
-            padding: 0 18px;
-        }
-
-        .project-card:hover .project-details {
-            max-height: 500px;
-            opacity: 1;
-            padding-bottom: 18px;
-        }
-
-        .project-details p {
-            font-size: 0.9em;
             margin-top: 10px;
+            font-size: 0.85em;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.25s ease, max-height 0.3s ease;
+        }
+        
+        .project-details img {
+            width: 100%;
+            aspect-ratio: auto;
+            object-fit: contain;      
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .project-card:hover .project-details {
+            opacity: 1;
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        
+        .project-details::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .project-details::-webkit-scrollbar-track {
+            background: rgba(15,25,35,0.45);
+            border-radius: 10px;
+        }
+        
+        .project-details::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, rgba(0,255,229,0.95), rgba(0,200,180,0.95));
+            border-radius: 10px;
+            border: 2px solid rgba(15,25,35,0.45);
+        }
+
+        .project-details::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, rgba(102,255,240,1), rgba(0,230,200,1));
+        }
+
+        /* Firefox */
+        .project-details {
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) rgba(15,25,35,0.45);
         }
 
         .details-images {
