@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        * { box-sizing: border-box; }
         :root {
             --bg-main: #0F1923;
             --bg-dark: #11111c;
@@ -51,6 +52,8 @@
         /* SECTION GLOBALE */
         .iut-projects {
             padding: 0 8% 80px;
+            max-width: 1980px;
+            margin: 0 auto;
         }
 
         /* BLOC ANNÉE */
@@ -167,6 +170,41 @@
             scrollbar-width: thin;
             scrollbar-color: var(--accent) rgba(15,25,35,0.45);
         }
+
+        /* Petit indicateur visuel invitant à taper sur mobile */
+        .tap-hint {
+            display: none;
+            font-size: 0.75em;
+            color: var(--accent);
+            margin-top: 8px;
+            opacity: 0.85;
+        }
+
+        /* ============================= */
+        /* RESPONSIVE - MOBILE */
+        /* ============================= */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+                margin: 35px auto 35px;
+            }
+            .iut-projects {
+                padding: 0 5% 50px;
+            }
+            .year-block {
+                margin-bottom: 50px;
+            }
+            .year-block h2 {
+                font-size: 1.4em;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 18px;
+            }
+            .tap-hint {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -194,6 +232,7 @@
                         <br>- Conception des pièces 3D (Supports de la goutière, plateau).
                         <br>- Écriture d'un compte-rendu / sujet de TP pour les futurs étudiants qui seront amenés à travailler sur le robot.
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 
@@ -205,6 +244,7 @@
                     <div class="project-details">
                         Programmation du GPN (Graphe de Production Normale) de la station, des modes de marche et d'arrêt, de la surveillance et de de l'analyse de défaillance en utilisant le langage GRAFCET et LADDER.
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 <div class="project-card">
@@ -218,6 +258,7 @@
                         Lecture de schémas, création de schémas électriques avec WinRelais, câblage, respect des normes de sécurité
                         et programmation du variateur de vitesse.
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 <div class="project-card">
@@ -233,6 +274,7 @@
                         <img src="images/projets/MICAP.jpg">
                         <br>- Une Pi 3, qui récupère les données traitées via I2C pour les délivrer à l'utilisateur sous différentes formes (tableau CSV, affichage sur écran tactile, page web host sur un serveur local, liaison TTL avec un pc).
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
             </div>
         </div>
@@ -252,6 +294,7 @@
                         <br>- Programmation d’un microcontrôleur PIC18F2520 en langage C, basée sur une logique séquentielle, afin de répondre aux différents défis proposés.
                         <br>- Complément : <a href=https://iut-grand-ouest-normandie.unicaen.fr/concours-de-robotique-cachan-2025-une-belle-performance-pour-le-departement-de-geii/">article de l'IUT sur le concours Cachan 2025.</a>
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 <div class="project-card">
@@ -268,6 +311,7 @@
                         <img src="images/projets/bluetooth.png">
                         <br>- Développement d'une petite application Android afin de communiquer avec le module bluetooth via un smartphone.
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 <div class="project-card">
@@ -289,6 +333,7 @@
                         mettre en œuvre le robot afin de répondre aux différentes demandes.
                         
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
                 <div class="project-card">
@@ -306,6 +351,7 @@
                         mettre en œuvre le robot afin de répondre aux
                         différentes demandes.
                     </div>
+                    <div class="tap-hint">Toucher pour voir les détails</div>
                 </div>
 
             </div>
