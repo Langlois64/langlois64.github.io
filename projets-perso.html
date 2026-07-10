@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        * { box-sizing: border-box; }
         :root {
             --bg-main: #0F1923;
             --bg-dark: #11111c;
@@ -54,6 +55,8 @@
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 25px;
             padding: 0 8% 80px;
+            max-width: 1980px;
+            margin: 0 auto;
         }
 
         /* CARD */
@@ -90,7 +93,7 @@
             line-height: 1.4em;
         }
 
-        /* DÉTAILS (HOVER) */
+        /* DÉTAILS (HOVER desktop / TAP mobile) */
         .project-details {
             margin-top: 10px;
             font-size: 0.85em;
@@ -151,6 +154,33 @@
             max-width: 90px;
             border-radius: 8px;
         }
+
+        /* Petit indicateur visuel invitant à taper sur mobile */
+        .tap-hint {
+            display: none;
+            font-size: 0.75em;
+            color: var(--accent);
+            margin-top: 8px;
+            opacity: 0.85;
+        }
+
+        /* ============================= */
+        /* RESPONSIVE - MOBILE */
+        /* ============================= */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+                margin: 35px auto 35px;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 18px;
+                padding: 0 5% 50px;
+            }
+            .tap-hint {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -171,6 +201,7 @@
             <div class="project-details">
                 <br>[actuellement en développement]
             </div>
+            <div class="tap-hint">Toucher pour voir les détails</div>
         </div>
 
         <!-- CARD 2 -->
@@ -184,6 +215,7 @@
                     Le rover intègre une mobilité tout-terrain, des caméras embarquées et une architecture
                     multi-microcontrôleurs.
             </div>
+            <div class="tap-hint">Toucher pour voir les détails</div>
         </div>
 
         <!-- CARD 3 -->
@@ -198,6 +230,7 @@
                 <br>Ceux-ci servent principalement à l'observation de mes différents aquariums & terrariums, permettant de réaliser des timelapses ainsi que d'étudier les habitudes de mes animaux. 
                 <br>D'autres modules sont placés devant les portes d'entrées, dont deux équipés d'une sortie audio afin de servir d'interphones.
             </div>
+            <div class="tap-hint">Toucher pour voir les détails</div>
         </div>
 
     </section>
