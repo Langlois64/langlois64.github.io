@@ -122,21 +122,26 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 6%;
             padding: 0 8%;
             border-bottom: 2px solid var(--accent);
+            max-width: 1980px;
+            margin: 0 auto;
         }
         #home img {
             width: 18vw;
+            max-width: 260px;
+            min-width: 140px;
             border-radius: 12px;
         }
         h1 {
-            font-size: 2.8rem; 
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 600;     
         }  
         #home p {
             color: var(--text-light);
-            font-size: 1.15em;
+            font-size: clamp(1em, 1.6vw, 1.15em);
             font-weight: 600;
             line-height: 1.3;
             max-width: 60ch;
@@ -164,6 +169,8 @@
             gap: 20px;
             grid-template-columns: 1fr 1fr;
             align-items: start;
+            max-width: 1980px;
+            margin: 0 auto;
         }
         .about-column {
                 display: flex;
@@ -322,6 +329,8 @@
             padding: 3% 5% 4% 5%; /* reduce top padding to bring boxes closer to the title */
             border-bottom: 2px solid var(--accent);
             overflow: auto;
+            max-width: 1980px;
+            margin: 0 auto;
         }
         #projets-section {
             width: 100%;
@@ -332,6 +341,7 @@
         }
         #projets-personnels, #projets-professionnels, #projets-iut {
             width: 340px;
+            max-width: 100%;
             background-color: #2b425a;
             border-radius: 12px;
             padding: 15px;
@@ -387,6 +397,86 @@
             text-align: center;
             color: var(--text-light);
             border-top: 2px solid var(--accent);
+        }
+
+        /* ============================= */
+        /* RESPONSIVE - TABLETTES / PETITS ECRANS */
+        /* ============================= */
+        @media (max-width: 900px) {
+            #aboutme {
+                grid-template-columns: 1fr;
+            }
+            .stack-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ============================= */
+        /* RESPONSIVE - MOBILE */
+        /* ============================= */
+        @media (max-width: 600px) {
+            :root {
+                --header-height: 46px;
+            }
+            header {
+                gap: 18px;
+            }
+            header a {
+                font-size: 0.9em;
+            }
+
+            #home {
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 24px 6%;
+                text-align: center;
+            }
+            #home img {
+                width: 45vw;
+                max-width: 200px;
+                min-width: 120px;
+            }
+            #home p {
+                max-width: none;
+            }
+            .cat-btn-cv {
+                width: 100% !important;
+            }
+
+            h1::after, h2::after {
+                width: 80%;
+            }
+
+            #aboutme {
+                padding: 12px 5%;
+            }
+            #stack-tech {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .stack-grid {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 10px;
+            }
+            .stack-item img {
+                width: 44px;
+                height: 44px;
+            }
+
+            #exp-pro img, #formation img {
+                width: 60px;
+            }
+
+            #projets {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 6% 6%;
+            }
+            #projets-personnels, #projets-professionnels, #projets-iut {
+                width: 100%;
+            }
         }
 
     </style>
